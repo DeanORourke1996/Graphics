@@ -6,19 +6,17 @@ public abstract class aGameObject {
     // fields
     protected PVector pos;
     protected PVector forward;
-    protected  PVector backward;
-    protected float rotation;
+    protected PVector rotation;
     protected float speed;
     protected Game asteroids;
 
     // constructor
-    public aGameObject(Game asteroids, float x, float y, float speed, float rotation){
+    public aGameObject(Game asteroids, float _x, float y, float _speed, PVector _rotation){
         this.asteroids = asteroids;
-        pos = new PVector(x, y);
+        pos = new PVector(_x, y);
         forward = new PVector(0, -1);
-        backward = new PVector(0, 1);
-        this.speed = speed;
-        this.rotation = rotation;
+        this.speed = _speed;
+        this.rotation = _rotation;
     }
 
 
@@ -42,19 +40,11 @@ public abstract class aGameObject {
         this.forward = forward;
     }
 
-    public PVector getBackward() {
-        return backward;
-    }
-
-    public void setBackward(PVector backward) {
-        this.backward = backward;
-    }
-
-    public float getRotation() {
+    public PVector getRotation() {
         return rotation;
     }
 
-    public void setRotation(float rotation) {
+    public void setRotation(PVector rotation) {
         this.rotation = rotation;
     }
 

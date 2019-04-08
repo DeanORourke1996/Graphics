@@ -9,9 +9,9 @@ public class SpaceShip extends aGameObject {
     private int ammo;
 
     // constructor
-    public SpaceShip(Game asteroids, float x, float y, float size, float speed){
-        super(asteroids, x, y, 0, speed);
-        this.size = size;
+    public SpaceShip(Game asteroids, float _x, float _y, float _size){
+        super(asteroids, _x, _y, 0, null);
+        this.size = _size;
         fireRate = 10;
         toPass = 1 / (float) fireRate;
         ammo = 10;
@@ -26,7 +26,6 @@ public class SpaceShip extends aGameObject {
 
         asteroids.pushMatrix();
         asteroids.translate(pos.x, pos.y);
-        asteroids.rotate(rotation);
     }
 
     public void update() {
