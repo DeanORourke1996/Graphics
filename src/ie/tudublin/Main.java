@@ -1,4 +1,4 @@
-package ie.dit;
+package ie.tudublin;
 
 public class Main {
 

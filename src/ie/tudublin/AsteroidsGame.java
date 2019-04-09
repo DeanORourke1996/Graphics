@@ -1,4 +1,4 @@
-package ie.dit;
+package ie.tudublin;
 
 import processing.core.PApplet;
 import java.util.ArrayList;

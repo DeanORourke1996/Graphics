@@ -1,4 +1,4 @@
-package ie.dit;
+package ie.tudublin;
 
 import processing.core.PVector;
 
@@ -28,7 +28,7 @@ public class SpaceShip extends aGameObject {
     }
 
     public void update() {
-        
+
     }
 
     // getters & setters
