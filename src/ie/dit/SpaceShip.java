@@ -1,35 +1,34 @@
 package ie.dit;
 
+import processing.core.PVector;
+
+import java.util.ArrayList;
+
 public class SpaceShip extends aGameObject {
     // fields
+    private PVector acceleration;
     private float size;
-    public int fireRate;
+    private int fireRate;
     private float toPass;
-    private float ellapsed;
     private int ammo;
 
     // constructor
-    public SpaceShip(Game asteroids, float _x, float _y, float _size){
-        super(asteroids, _x, _y, null, null);
-        this.size = _size;
-        fireRate = 10;
-        toPass = 1 / (float) fireRate;
-        ammo = 10;
+    public SpaceShip(AsteroidsGame asteroids) {
+        super(asteroids, 0, 0, null, null);
+        pos = new PVector(width / 2, height - 50);
+        acceleration = new PVector(0, 0);
+        velocity = new PVector(0, 0);
+        rotation = new PVector(0, 1);
     }
 
     // implement methods from abstract class
 
     public void render() {
-        // method fields (local)
-        float halfSize = size / 2;
 
-
-        asteroids.pushMatrix();
-        asteroids.translate(pos.x, pos.y);
     }
 
     public void update() {
-
+        
     }
 
     // getters & setters
@@ -55,14 +54,6 @@ public class SpaceShip extends aGameObject {
 
     public void setToPass(float toPass) {
         this.toPass = toPass;
-    }
-
-    public float getEllapsed() {
-        return ellapsed;
-    }
-
-    public void setEllapsed(float ellapsed) {
-        this.ellapsed = ellapsed;
     }
 
     public int getAmmo() {

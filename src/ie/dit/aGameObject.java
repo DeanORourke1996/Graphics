@@ -8,11 +8,11 @@ public abstract class aGameObject extends PApplet {
     protected PVector pos;
     protected PVector velocity;
     protected PVector rotation;
-    protected Game asteroids;
+    protected AsteroidsGame ast;
 
     // constructor
-    public aGameObject(Game asteroids, float _x, float y, PVector _velocity, PVector _rotation){
-        this.asteroids = asteroids;
+    public aGameObject(AsteroidsGame ast, float _x, float y, PVector _velocity, PVector _rotation){
+        this.ast = ast;
         pos = new PVector(_x, y);
         velocity = new PVector(0, -1);
         velocity = _velocity;
@@ -56,11 +56,11 @@ public abstract class aGameObject extends PApplet {
         this.velocity = velocity;
     }
 
-    public Game getAsteroids() {
-        return asteroids;
+    public AsteroidsGame getAsteroids() {
+        return ast;
     }
 
-    public void setAsteroids(Game asteroids) {
-        this.asteroids = asteroids;
+    public void setAsteroids(AsteroidsGame ast) {
+        this.ast = ast;
     }
 }

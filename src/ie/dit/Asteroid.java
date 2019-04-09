@@ -1,7 +1,6 @@
 package ie.dit;
 
 import processing.core.PVector;
-import processing.core.PApplet;
 import java.util.ArrayList;
 
 
@@ -12,11 +11,11 @@ public class Asteroid extends aGameObject {
     private int stage;
     private float spin;
     private float dampn = 1;
-    private int col = 100;
+    private int col = 190;
 
     // constructor
-    public Asteroid(Game asteroids, float _x, float _y, float _radius, PVector _rotation, PVector _pos, PVector _velocity, int _stage){ // overloading
-        super(asteroids, _x, _y, _rotation, _pos);
+    public Asteroid(AsteroidsGame asteroid, float _radius, PVector _pos, int _stage){ // overloading
+        super(asteroid, 0, 0, null, _pos);
         this.radius = _radius;
         this.stage = _stage;
         this.pos = _pos; // from abstract class
@@ -28,7 +27,6 @@ public class Asteroid extends aGameObject {
         angle = random(2 * PI);
         rotation = new PVector(cos(angle), sin(angle));
         spin = (float)(Math.random()*oL-oL/2);
-        int rnd = (int)(Math.random()*3);
     }
 
     // asteroid methods
@@ -36,6 +34,7 @@ public class Asteroid extends aGameObject {
         pushMatrix();
         translate(x,y);
         rotate((float)(Math.atan2(rotation.y, rotation.x)));
+        color(255, 204, 0);
         ellipse(0, 0, (float)2.1*radius, (float)1.9 * radius);
         popMatrix();
     }
@@ -46,12 +45,38 @@ public class Asteroid extends aGameObject {
         v.y = xT*sin(thetha) + v.y*cos(thetha);
     }
 
+    public void edges(){
+        if(pos.x < 0){
+            pos.x = width;
+        }
+        if(pos.y < 0){
+            pos.y = height;
+        }
+        if(pos.x > width){
+            pos.x = 0;
+        }
+        if(pos.y > height){
+            pos.y = 0;
+        }
+    }
+
     public void destroy(ArrayList<Asteroid> asteroids){
         if(radius <= 30){
             asteroids.remove(this);
         } else if(radius < 33){
-            for(int i=0; i<2; i++){
-                float angle;
+            for(int i = 0; i < 2; i++){
+                float angle = random(2*PI);
+                PVector rand = new PVector(radius*sin(angle), radius*cos(angle));
+                rand.add(pos);
+                asteroids.add(new Asteroid(ast, radius*8, rand, stage));
+            }
+            asteroids.remove(this);
+        } else {
+            for (int i = 0; i < 3; i++) {
+                float angle = (2 * PI);
+                PVector rand = new PVector(radius * sin(angle), radius * cos(angle));
+                rand.add(pos);
+                asteroids.add(new Asteroid(ast, radius * 8, rand, stage));
             }
         }
     }
