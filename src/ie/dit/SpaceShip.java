@@ -10,7 +10,7 @@ public class SpaceShip extends aGameObject {
 
     // constructor
     public SpaceShip(Game asteroids, float _x, float _y, float _size){
-        super(asteroids, _x, _y, 0, null);
+        super(asteroids, _x, _y, null, null);
         this.size = _size;
         fireRate = 10;
         toPass = 1 / (float) fireRate;

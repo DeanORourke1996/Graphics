@@ -6,11 +6,12 @@ import java.util.ArrayList;
 public class Game extends PApplet {
 
     // fields
-    public ArrayList<aGameObject> gameObjects = new ArrayList<>();
-    public ArrayList<aGameObject> asteroids;
+    public ArrayList<aGameObject> gameObjects;
+    public ArrayList<Asteroid> asteroids = new ArrayList<>(0);
 
     // create a ship object
     SpaceShip Ship;
+    Asteroid asteroid;
 
     // key control
     private boolean upPressed = false;
@@ -46,11 +47,11 @@ public class Game extends PApplet {
         //font = createFont("Cambria", 32);
         frameRate(24);
         lives = 3;
-        asteroids = new ArrayList<>(0);
+        gameObjects = new ArrayList<>(0);
     }
 
     public void draw(){
-
+        asteroid.render();
     }
 
     public boolean isUpPressed() {

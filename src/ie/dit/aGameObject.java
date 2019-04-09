@@ -1,21 +1,21 @@
 package ie.dit;
 
+import processing.core.PApplet;
 import processing.core.PVector;
 
-public abstract class aGameObject {
+public abstract class aGameObject extends PApplet {
     // fields
     protected PVector pos;
-    protected PVector forward;
+    protected PVector velocity;
     protected PVector rotation;
-    protected float speed;
     protected Game asteroids;
 
     // constructor
-    public aGameObject(Game asteroids, float _x, float y, float _speed, PVector _rotation){
+    public aGameObject(Game asteroids, float _x, float y, PVector _velocity, PVector _rotation){
         this.asteroids = asteroids;
         pos = new PVector(_x, y);
-        forward = new PVector(0, -1);
-        this.speed = _speed;
+        velocity = new PVector(0, -1);
+        velocity = _velocity;
         this.rotation = _rotation;
     }
 
@@ -33,11 +33,11 @@ public abstract class aGameObject {
     }
 
     public PVector getForward() {
-        return forward;
+        return velocity;
     }
 
     public void setForward(PVector forward) {
-        this.forward = forward;
+        velocity = forward;
     }
 
     public PVector getRotation() {
@@ -48,12 +48,12 @@ public abstract class aGameObject {
         this.rotation = rotation;
     }
 
-    public float getSpeed() {
-        return speed;
+    public PVector getSpeed() {
+        return velocity;
     }
 
     public void setSpeed(float speed) {
-        this.speed = speed;
+        this.velocity = velocity;
     }
 
     public Game getAsteroids() {
