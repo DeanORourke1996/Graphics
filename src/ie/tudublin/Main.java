@@ -2,13 +2,13 @@ package ie.tudublin;
 
 public class Main {
 
-    public void asteroids(){
+    public void scifiUI(){
         String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch(a, new AsteroidsGame());
+        processing.core.PApplet.runSketch(a, new UI());
     }
 
     public static void main(String[] args) {
         Main main = new Main();
-        main.asteroids();
+        main.scifiUI();
     }
 }
