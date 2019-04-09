@@ -26,9 +26,7 @@ public class UI extends PApplet {
 
     public void settings()
     {
-        size(800, 800);
-        // Use fullscreen instead of size to make your interface fullscreen
-        //fullScreen();
+        fullScreen();
     }
 
     public void setup()
@@ -45,7 +43,7 @@ public class UI extends PApplet {
         mc.update();
         mc.render();
 
-        if (checkKey(LEFT))
+        if (checkKey(' '))
         {
             System.out.println("Left arrow key pressed");
         }
