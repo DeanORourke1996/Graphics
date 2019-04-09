@@ -2,38 +2,32 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
-public class MovingCircle {
-    private float x;
-    private float dx = 1;
-    private float y;
+public class MovingCircle extends InterfaceObject {
+    private float dx;
     private float diameter;
     private float radius;
     PApplet ui;
 
-    public MovingCircle(PApplet ui, float x, float y, float diameter)
-    {
-        this.ui = ui;
-        this.x = x;
-        this.y = y;
-        this.diameter = diameter;
-        radius = diameter / 2;
+    public MovingCircle(UI ui, float _dx, float _diameter, float _radius) {
+        super(ui, null, null, null, null);
+        this.dx = _dx;
+        this.diameter = _diameter;
+        this.radius = _radius;
     }
 
-    public void render()
-    {
+    public void render() {
         ui.stroke(255);
         ui.noFill();
-        ui.ellipse(x, y, diameter, diameter);
+        ui.ellipse(position.x, position.y, diameter, diameter);
         ui.fill(255);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        ui.text("I am a moving circle", x, y);
+        ui.text("I am a moving circle", position.x, position.y);
 
     }
 
-    public void update()
-    {
-        x += dx;
-        if ((x > ui.width - radius) || (x < radius))
+    public void update() {
+        position.x += dx;
+        if ((position.x > ui.width - radius) || (position.x < radius))
         {
             dx *= -1;
         }

@@ -5,10 +5,10 @@ import processing.core.PVector;
 
 // abstract class here...
 public abstract class InterfaceObject extends PApplet {
-    private PVector position;
-    private PVector size; // w - h
-    private PVector speed;
-    private PVector acceleration;
+    PVector position;
+    PVector size; // w - h
+    PVector speed;
+    PVector acceleration;
 
     public InterfaceObject(UI ui, PVector _size, PVector _pos, PVector _speed, PVector _acceleration){
         position = _pos;
@@ -20,4 +20,8 @@ public abstract class InterfaceObject extends PApplet {
     // abstract methods
     public abstract void update();
     public abstract void render();
+
+    public PVector getSize() {
+        return size;
+    }
 }

@@ -32,7 +32,7 @@ public class UI extends PApplet {
     public void setup()
     {
         b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, width / 2, height / 2, 50);
+        mc = new MovingCircle(this, height / 2, height / 2, 50);
     }
 
     public void draw()
