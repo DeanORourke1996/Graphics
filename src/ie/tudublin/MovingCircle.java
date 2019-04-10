@@ -4,13 +4,16 @@ import processing.core.PApplet;
 import processing.core.PVector;
 
 public class MovingCircle extends InterfaceObject {
+    // fields
     private float dx = 1;
     private float diameter;
     private float radius;
-    PApplet ui;
+
+    private PApplet ui;
 
     public MovingCircle(PApplet _ui, PVector _pos, float _diameter) {
         super(_ui, _pos);
+        this.ui = _ui;
         this.diameter = _diameter;
         radius = diameter / 2;
     }

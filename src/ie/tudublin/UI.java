@@ -3,13 +3,11 @@ package ie.tudublin;
 import processing.core.PApplet;
 import processing.core.PVector;
 
-public class UI extends PApplet {
-    Button b;
-    MovingCircle mc;
-    HeadingTabs ht1;
+import java.util.ArrayList;
 
-    PApplet pa = new PApplet();
-    PVector pos;
+public class UI extends PApplet {
+    MovingCircle mc;
+    HeadingTabs[] headings = new HeadingTabs[3];
 
     float diameter = 50;
     boolean[] keys = new boolean[1024];
@@ -36,20 +34,20 @@ public class UI extends PApplet {
     }
 
     public void setup() {
-        mc = new MovingCircle(this, pos, diameter);
-        ht1 = new HeadingTabs(pa, pos);
+        PVector headPos = new PVector(0, 100);
+        PVector headSize = new PVector(250, 100);
+
+        for(int i=0; i<2; i++){
+            headings[i] = new HeadingTabs(this, headPos, headSize);
+        }
+
+        headings[2] = new HeadingTabs(this, headPos, headSize);
+
     }
 
     public void draw()
     {
-        background(0);
-        //b.render();
 
-        ht1.render();
-
-
-        mc.update();
-        mc.render();
     }
 }
 
