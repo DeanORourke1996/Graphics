@@ -1,10 +1,14 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import processing.core.PVector;
 
 public class UI extends PApplet {
     Button b;
     MovingCircle mc;
+    PApplet pa;
+    PVector pos = new PVector(width/2,height/2);
+    float diameter = 50;
 
     boolean[] keys = new boolean[1024];
 
@@ -26,27 +30,21 @@ public class UI extends PApplet {
 
     public void settings()
     {
-        fullScreen();
+        size(800, 500);
     }
 
     public void setup()
     {
-        b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, height / 2, height / 2, 50);
+        mc = new MovingCircle(this, pos, diameter);
     }
 
     public void draw()
     {
         background(0);
-        b.render();
+        //b.render();
 
         mc.update();
         mc.render();
-
-        if (checkKey(' '))
-        {
-            System.out.println("Left arrow key pressed");
-        }
     }
 }
 
