@@ -6,10 +6,12 @@ import processing.core.PVector;
 public class UI extends PApplet {
     Button b;
     MovingCircle mc;
-    PApplet pa;
-    PVector pos = new PVector(width/2,height/2);
-    float diameter = 50;
+    HeadingTabs ht1;
 
+    PApplet pa = new PApplet();
+    PVector pos;
+
+    float diameter = 50;
     boolean[] keys = new boolean[1024];
 
     public void keyPressed()
@@ -33,15 +35,18 @@ public class UI extends PApplet {
         size(800, 500);
     }
 
-    public void setup()
-    {
+    public void setup() {
         mc = new MovingCircle(this, pos, diameter);
+        ht1 = new HeadingTabs(pa, pos);
     }
 
     public void draw()
     {
         background(0);
         //b.render();
+
+        ht1.render();
+
 
         mc.update();
         mc.render();

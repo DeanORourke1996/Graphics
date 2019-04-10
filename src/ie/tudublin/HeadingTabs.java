@@ -5,18 +5,16 @@ import processing.core.PVector;
 
 public class HeadingTabs extends InterfaceObject {
 
-
-
     public HeadingTabs(PApplet _ui, PVector _pos){
         super(_ui, _pos);
     }
 
-
-    public void update() {
-
+    public void render() {
+        fill(32, 241, 238);
+        rect(20, 20, 20, 20);
     }
 
-    public void render() {
+    public void update() {
 
     }
 }
