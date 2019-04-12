@@ -14,12 +14,17 @@ public class HeadingTabs extends InterfaceObject {
         size = _size;
     }
 
+    public float createGap(float space){
+        float offset = (width - (this.pos.x + this.size.x));
+    }
+
     public void render() {
         ui.fill(32, 241, 238);
         ui.rect(pos.x, pos.y, size.x, size.y);
     }
 
     public void update() {
-        
+        float space = ((float)width / 3);
+        createGap(space);
     }
 }

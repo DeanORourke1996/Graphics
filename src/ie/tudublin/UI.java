@@ -3,11 +3,9 @@ package ie.tudublin;
 import processing.core.PApplet;
 import processing.core.PVector;
 
-import java.util.ArrayList;
-
 public class UI extends PApplet {
-    MovingCircle mc;
-    HeadingTabs[] headings = new HeadingTabs[3];
+    MovingCircle[] movingCircle;
+    HeadingTabs headR, headL, headCenter;
 
     float diameter = 50;
     boolean[] keys = new boolean[1024];
@@ -28,25 +26,20 @@ public class UI extends PApplet {
     }
 
 
-    public void settings()
-    {
-        size(800, 500);
+    public void settings() {
+        fullScreen();
     }
 
     public void setup() {
-        PVector headPos = new PVector(0, 100);
-        PVector headSize = new PVector(250, 100);
+        background(0);
+        PVector size = new PVector(100, 100);
+        PVector pos = new PVector(10, 0);
 
-        for(int i=0; i<2; i++){
-            headings[i] = new HeadingTabs(this, headPos, headSize);
-        }
-
-        headings[2] = new HeadingTabs(this, headPos, headSize);
+        headL = new HeadingTabs(this, pos, )
 
     }
 
-    public void draw()
-    {
+    public void draw() {
 
     }
 }
