@@ -32,15 +32,26 @@ public class UI extends PApplet {
 
     public void setup() {
         background(0);
-        PVector size = new PVector(100, 100);
-        PVector pos = new PVector(10, 0);
 
-        headL = new HeadingTabs(this, pos, )
+        rectMode(CENTER);
+        PVector size = new PVector(150, 150);
+        PVector pos = new PVector((float)(width / 4.25) - size.x, 0);
+        headL = new HeadingTabs(this, pos, size);
+
+        size = new PVector(800, 150);
+        pos = new PVector((width/2) , 0);
+        headCenter = new HeadingTabs(this, pos, size);
+
+        size = new PVector(130, 150);
+        pos = new PVector(width - (float)(width / 4.25) , 0);
+        headR = new HeadingTabs(this, pos, size);
 
     }
 
     public void draw() {
-
+        headL.render();
+        headCenter.render();
+        headR.render();
     }
 }
 

@@ -5,8 +5,10 @@ import processing.core.PVector;
 
 public class HeadingTabs extends InterfaceObject {
     // fields
+    private int corners = 12;
     private PApplet ui;
     private PVector size;
+    private float dx = 1;
 
     public HeadingTabs(PApplet _ui, PVector _pos, PVector _size){
         super(_ui, _pos);
@@ -14,17 +16,12 @@ public class HeadingTabs extends InterfaceObject {
         size = _size;
     }
 
-    public float createGap(float space){
-        float offset = (width - (this.pos.x + this.size.x));
-    }
-
     public void render() {
         ui.fill(32, 241, 238);
-        ui.rect(pos.x, pos.y, size.x, size.y);
+        ui.rect(pos.x, pos.y, size.x, size.y, 0, 0, corners, corners);
     }
 
     public void update() {
-        float space = ((float)width / 3);
-        createGap(space);
+        
     }
 }
