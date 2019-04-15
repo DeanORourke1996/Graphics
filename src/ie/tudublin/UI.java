@@ -2,6 +2,9 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import processing.core.PVector;
+import java.util.Date;
+
+import java.sql.Time;
 
 public class UI extends PApplet {
     MovingCircle[] movingCircle;
@@ -32,6 +35,12 @@ public class UI extends PApplet {
 
     public void setup() {
         background(0);
+
+        // get date
+        String sDate;
+        Date date = new Date();
+        sDate = date.toString();
+
 
         rectMode(CENTER);
         PVector size = new PVector(150, 150);
