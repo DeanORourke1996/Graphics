@@ -7,7 +7,7 @@ public class HeadingTabs extends InterfaceObject {
     // fields
     private int corners = 12;
     private PApplet ui;
-    private PVector size;
+    PVector size;
     private float dx = 1;
 
     public HeadingTabs(PApplet _ui, PVector _pos, PVector _size){
