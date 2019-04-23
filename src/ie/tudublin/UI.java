@@ -7,12 +7,11 @@ import java.util.Date;
 public class UI extends PApplet {
     private static final int WIDTH = 800;
     private float halfWidth = WIDTH / 2;
-
-    MovingCircle[] movingCircle;
-    private HeadingTabs headR, headL, headCenter;
-
-    float diameter = 50;
     private boolean[] keys = new boolean[1024];
+    private PVector squaSize = new PVector();
+    private PVector squaPos = new PVector();
+
+    private HeadingTabs headR, headL, headCenter;
 
     public void keyPressed()
     {
@@ -33,7 +32,7 @@ public class UI extends PApplet {
         int margin = 140;
         rectMode(CENTER);
         PVector size = new PVector(WIDTH, 150);
-        PVector pos = new PVector((width/2) , 0);
+        PVector pos = new PVector((float)(width/2) , 0);
         headCenter = new HeadingTabs(this, pos, size);
 
         size = new PVector(200, 150);
@@ -46,15 +45,17 @@ public class UI extends PApplet {
     }
 
     private void drawGrid() {
-        int offset = 40;
+        int offset = 100;
         fill(0);
         stroke(32, 241, 238);
         rectMode(CORNER);
         // 55 percent height of page with tabs...
-        rect((float)(width / 2) - halfWidth, headCenter.size.y + offset, WIDTH, (float)(height * 0.55));
+        rect((float)(width / 2) - halfWidth, headCenter.size.y, WIDTH, (float)(height * 0.55));
         rectMode(CENTER);
-    }
 
+        //line(headL.pos.x + (headL.size.x/2) - 50, headL.pos.y + offset, headL.pos.x + (headL.size.x/2) - 50, headCenter.pos.y);
+        line(headR.pos.x - (headR.size.x/2) + 50, headR.pos.y + offset, headR.pos.x - (headR.size.x/2) + 50, height - 50);
+    }
 
     public void settings() {
         fullScreen();
@@ -70,6 +71,8 @@ public class UI extends PApplet {
         headCenter.render();
         headL.render();
         headR.render();
+
+//        squares.update();
     }
 }
 
