@@ -11,6 +11,7 @@ public class UI extends PApplet {
     private PVector squaSize = new PVector();
     private PVector squaPos = new PVector();
 
+    private Squares squares;
     private HeadingTabs headR, headL, headCenter;
 
     public void keyPressed()
@@ -53,8 +54,8 @@ public class UI extends PApplet {
         rect((float)(width / 2) - halfWidth, headCenter.size.y, WIDTH, (float)(height * 0.55));
         rectMode(CENTER);
 
-        //line(headL.pos.x + (headL.size.x/2) - 50, headL.pos.y + offset, headL.pos.x + (headL.size.x/2) - 50, headCenter.pos.y);
-        line(headR.pos.x - (headR.size.x/2) + 50, headR.pos.y + offset, headR.pos.x - (headR.size.x/2) + 50, height - 50);
+//        line(headL.pos.x + (headL.size.x/2) - 50, headL.pos.y + offset, headL.pos.x + (headL.size.x/2) - 20, (float)(height * 0.55));
+//        line(headR.pos.x - (headR.size.x/2) + 50, headR.pos.y + offset, headR.pos.x - (headR.size.x/2) + 20, (float)(height * 0.55));
     }
 
     public void settings() {
@@ -63,6 +64,7 @@ public class UI extends PApplet {
 
     public void setup() {
         background(0);
+        squares = new Squares(this);
         drawTabs();
         drawGrid();
     }
@@ -72,7 +74,8 @@ public class UI extends PApplet {
         headL.render();
         headR.render();
 
-//        squares.update();
+        squares.update();
+        squares.render();
     }
 }
 
