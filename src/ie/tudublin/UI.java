@@ -11,7 +11,7 @@ public class UI extends PApplet {
     private PVector squaSize = new PVector();
     private PVector squaPos = new PVector();
 
-    private Squares squares;
+    private Squares[] squares;
     private HeadingTabs headR, headL, headCenter;
 
     public void keyPressed()
@@ -63,8 +63,15 @@ public class UI extends PApplet {
     }
 
     public void setup() {
+        PVector size = new PVector(400,250);
+        PVector pos = new PVector(width/2, height/2);
         background(0);
-        squares = new Squares(this);
+        for(int i=0; i<=4; i++) {
+            squares[i] = new Squares(this, size, pos);
+            squares[i].render();
+            squares[i].update();
+        }
+
         drawTabs();
         drawGrid();
     }
@@ -73,9 +80,6 @@ public class UI extends PApplet {
         headCenter.render();
         headL.render();
         headR.render();
-
-        squares.update();
-        squares.render();
     }
 }
 

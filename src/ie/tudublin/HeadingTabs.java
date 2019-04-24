@@ -17,6 +17,7 @@ public class HeadingTabs extends InterfaceObject {
     }
 
     public void render() {
+        ui.noStroke();
         ui.fill(32, 241, 238);
         ui.rect(pos.x, pos.y, size.x, size.y, 0, 0, corners, corners);
     }
