@@ -5,13 +5,15 @@ import processing.core.PVector;
 import java.util.Date;
 
 public class UI extends PApplet {
+    private static final int INIT_RECT_WIDTH = 420;
+    private static final int INIT_RECT_HEIGHT = 270;
     private static final int WIDTH = 800;
     private float halfWidth = WIDTH / 2;
     private boolean[] keys = new boolean[1024];
-    private PVector squaSize = new PVector();
-    private PVector squaPos = new PVector();
+    private PVector rectSize = new PVector(INIT_RECT_WIDTH, INIT_RECT_HEIGHT);
+    private final PVector rectPos = new PVector(width/2, height/2);
 
-    private Squares[] squares;
+    private Squares squares;
     private HeadingTabs headR, headL, headCenter;
 
     public void keyPressed()
@@ -63,14 +65,9 @@ public class UI extends PApplet {
     }
 
     public void setup() {
-        PVector size = new PVector(400,250);
-        PVector pos = new PVector(width/2, height/2);
         background(0);
-        for(int i=0; i<=4; i++) {
-            squares[i] = new Squares(this, size, pos);
-            squares[i].render();
-            squares[i].update();
-        }
+
+        squares = new Squares(this, rectPos, rectSize);
 
         drawTabs();
         drawGrid();
@@ -80,6 +77,9 @@ public class UI extends PApplet {
         headCenter.render();
         headL.render();
         headR.render();
+
+        squares.render();
+        squares.update();
     }
 }
 
