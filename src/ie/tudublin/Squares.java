@@ -5,10 +5,10 @@ import processing.core.PVector;
 
 public class Squares extends InterfaceObject {
 
-    PApplet ui;
-    PVector size;
+    private PApplet ui;
+    private PVector size;
     private float s = 0.9f;
-    private float dS = 0.115f;
+    private final float dS = 0.115f;
 
     public Squares(PApplet _ui, PVector _pos, PVector _size) {
         super(_ui, _pos);
@@ -18,7 +18,7 @@ public class Squares extends InterfaceObject {
 
     public void update() {
         if(s < 1 && s >= 0) {
-            s -= dS; // < -- This takes the scale variable and decreases it by .1 each time the update method is called
+            s -= dS;
         }
     }
 
