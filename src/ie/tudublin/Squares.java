@@ -17,7 +17,7 @@ public class Squares extends InterfaceObject {
     }
 
     public void update() {
-        if(s < 1 && s >= 0) {
+        if(s < 1 && s >= 0.4) {
             s -= dS;
         }
     }

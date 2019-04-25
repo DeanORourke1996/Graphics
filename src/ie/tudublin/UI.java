@@ -9,8 +9,8 @@ import java.time.format.DateTimeFormatter;
 
 public class UI extends PApplet {
     private static final String DATE_FORMATTER = "HH:mm";
-    private static final int INIT_RECT_WIDTH = 420;
-    private static final int INIT_RECT_HEIGHT = 270;
+    private static final int INIT_RECT_WIDTH = 430;
+    private static final int INIT_RECT_HEIGHT = 280;
     private static final int C_WIDTH = 800;
     private static final int LR_WIDTH = 200;
     private static final int A_HEIGHT = 150;
@@ -61,8 +61,6 @@ public class UI extends PApplet {
         headR = new HeadingTabs(this, pos, size);
 
 
-
-
     }
 
     private void drawGrid() {
@@ -85,9 +83,7 @@ public class UI extends PApplet {
     public void setup() {
         background(0);
         f = createFont("Arial", 16, true);
-
         squares = new Squares(this, rectPos, rectSize);
-
         drawTabs();
         drawGrid();
     }
@@ -103,18 +99,6 @@ public class UI extends PApplet {
 
         squares.render();
         squares.update();
-    }
-
-    public LocalDateTime getLocalDateTime() {
-        return localDateTime;
-    }
-
-    public DateTimeFormatter getFormatter() {
-        return formatter;
-    }
-
-    public String getFormatTime() {
-        return formatTime;
     }
 }
 
