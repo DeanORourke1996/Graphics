@@ -9,6 +9,7 @@ public class Squares extends InterfaceObject {
     private PVector size;
     private float s = 0.9f;
     private final float dS = 0.115f;
+    private float theta = 0.0f;
 
     public Squares(PApplet _ui, PVector _pos, PVector _size) {
         super(_ui, _pos);
@@ -32,6 +33,16 @@ public class Squares extends InterfaceObject {
         ui.translate(ui.width / 2, ui.height / 2 - 20);
         ui.scale(s);
         ui.rect(0, 0, size.x, size.y);
+        if(theta > 360) {
+            theta = 0;
+        } else {
+            theta += .5f;
+        }
+
+        ui.rotate(degrees(theta));
+
         ui.popMatrix();
     }
+
+
 }
