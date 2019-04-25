@@ -89,13 +89,18 @@ public class UI extends PApplet {
     }
 
     public void draw() {
+        int offsetX = 5;
+        int offsetY = 85;
+
         headCenter.render();
         headL.render();
         headR.render();
 
-        textFont(f, 16);
+        textFont(f, 20);
         fill(50);
-        text(formatTime, headR.pos.x - (float)LR_WIDTH/2 + 5, A_HEIGHT - 85);
+        text(formatTime, headR.pos.x - (float)LR_WIDTH/2 + offsetX, A_HEIGHT - offsetY);
+        text("COV 274207281 - 1", headCenter.pos.x - (float)(C_WIDTH / 2) + offsetX, A_HEIGHT - offsetY);
+        text("L - 542", headL.pos.x - (float)(LR_WIDTH/2) + offsetX, A_HEIGHT - offsetY);
 
         squares.render();
         squares.update();
