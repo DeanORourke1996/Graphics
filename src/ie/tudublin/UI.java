@@ -72,8 +72,9 @@ public class UI extends PApplet {
         rect((float)(width / 2) - halfWidth, headCenter.size.y, C_WIDTH, (float)(height * 0.55));
         rectMode(CENTER);
 
-//        line(headL.pos.x + (headL.size.x/2) - 50, headL.pos.y + offset, headL.pos.x + (headL.size.x/2) - 20, (float)(height * 0.55));
-//        line(headR.pos.x - (headR.size.x/2) + 50, headR.pos.y + offset, headR.pos.x - (headR.size.x/2) + 20, (float)(height * 0.55));
+
+        line(headL.pos.x + (headL.size.x/2), headL.pos.y + offset, headL.pos.x + (headL.size.x/2), (float)(height * 0.80));
+        line(headR.pos.x - (headR.size.x/2), headR.pos.y + offset, headR.pos.x - (headR.size.x/2), (float)(height * 0.80));
     }
 
     public void settings() {
@@ -101,6 +102,7 @@ public class UI extends PApplet {
         text(formatTime, headR.pos.x - (float)LR_WIDTH/2 + offsetX, A_HEIGHT - offsetY);
         text("COV 274207281 - 1", headCenter.pos.x - (float)(C_WIDTH / 2) + offsetX, A_HEIGHT - offsetY);
         text("L - 542", headL.pos.x - (float)(LR_WIDTH/2) + offsetX, A_HEIGHT - offsetY);
+
 
         squares.render();
         squares.update();
