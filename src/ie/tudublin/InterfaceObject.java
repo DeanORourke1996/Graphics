@@ -13,6 +13,6 @@ public abstract class InterfaceObject extends PApplet {
     }
 
     // abstract methods
-    public abstract void update();
+    public abstract void update(int x);
     public abstract void render();
 }

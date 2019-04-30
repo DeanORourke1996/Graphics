@@ -22,7 +22,7 @@ public class HeadingTabs extends InterfaceObject {
         ui.rect(pos.x, pos.y, size.x, size.y, 0, 0, corners, corners);
     }
 
-    public void update() {
+    public void update(int x) {
         
     }
 }
