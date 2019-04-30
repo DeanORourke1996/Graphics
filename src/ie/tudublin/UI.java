@@ -9,8 +9,8 @@ import java.time.format.DateTimeFormatter;
 
 public class UI extends PApplet {
     private static final String DATE_FORMATTER = "HH:mm";
-    private static final int INIT_RECT_WIDTH = 430;
-    private static final int INIT_RECT_HEIGHT = 280;
+    private static final int INIT_RECT_WIDTH = 400;
+    private static final int INIT_RECT_HEIGHT = 200;
     private static final int C_WIDTH = 800;
     private static final int LR_WIDTH = 200;
     private static final int A_HEIGHT = 150;
@@ -83,15 +83,22 @@ public class UI extends PApplet {
 
     public void setup() {
         background(0);
+        frameRate(60);
         f = createFont("Arial", 16, true);
         squares = new Squares(this, rectPos, rectSize);
-        drawTabs();
-        drawGrid();
+
     }
+
+    private float s = 0.9f;
+    private final float dS = 0.115f;
+    private float theta = 0;
 
     public void draw() {
         int offsetX = 5;
         int offsetY = 85;
+
+        drawTabs();
+        drawGrid();
 
         headCenter.render();
         headL.render();
@@ -104,8 +111,24 @@ public class UI extends PApplet {
         text("L - 542", headL.pos.x - (float)(LR_WIDTH/2) + offsetX, A_HEIGHT - offsetY);
 
 
-        squares.render();
-        squares.update();
+        smooth();
+        noFill();
+        stroke(0, 202, 47);
+        strokeWeight(1.5f);
+        rectMode(CENTER);
+        pushMatrix();
+        translate(width / 2, height / 2 - 20);
+        rotate(radians(theta));
+        for(float i = s; i >= 0.4; i -= dS) {
+            scale(i);
+            rect(0, 0, rectSize.x, rectSize.y);
+        }
+        popMatrix();
+
+        theta += 0.5f;
+
+//        squares.render();
+//        squares.update();
     }
 }
 

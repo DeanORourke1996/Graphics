@@ -31,12 +31,14 @@ public class Squares extends InterfaceObject {
         ui.rectMode(CENTER);
         ui.pushMatrix();
         ui.translate(ui.width / 2, ui.height / 2 - 20);
+        ui.background(0);
         ui.rotate(radians(theta));
+        for(float i = )
         ui.scale(s);
         ui.rect(0, 0, size.x, size.y);
         ui.popMatrix();
 
-        theta += 1;
+        theta += 0.5f;
     }
 
 }
