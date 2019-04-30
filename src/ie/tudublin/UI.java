@@ -111,24 +111,22 @@ public class UI extends PApplet {
         text("L - 542", headL.pos.x - (float)(LR_WIDTH/2) + offsetX, A_HEIGHT - offsetY);
 
 
-        smooth();
-        noFill();
-        stroke(0, 202, 47);
-        strokeWeight(1.5f);
-        rectMode(CENTER);
-        pushMatrix();
-        translate(width / 2, height / 2 - 20);
-        rotate(radians(theta));
-        for(float i = s; i >= 0.4; i -= dS) {
-            scale(i);
-            rect(0, 0, rectSize.x, rectSize.y);
-        }
-        popMatrix();
-
-        theta += 0.5f;
-
-//        squares.render();
-//        squares.update();
+//        smooth();
+//        noFill();
+//        stroke(0, 202, 47);
+//        strokeWeight(1.5f);
+//        rectMode(CENTER);
+//        pushMatrix();
+//        translate(width / 2, height / 2 - 20);
+//        rotate(radians(theta));
+//        for(float i = s; i >= 0.4; i -= dS) {
+//            scale(i);
+//            rect(0, 0, rectSize.x, rectSize.y);
+//        }
+//        popMatrix();
+//
+//        theta += 0.5f;
+        squares.render();
     }
 }
 

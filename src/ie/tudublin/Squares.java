@@ -18,9 +18,7 @@ public class Squares extends InterfaceObject {
     }
 
     public void update() {
-        if(s < 1 && s >= 0.4) {
-            s -= dS;
-        }
+
     }
 
     public void render() {
@@ -31,11 +29,11 @@ public class Squares extends InterfaceObject {
         ui.rectMode(CENTER);
         ui.pushMatrix();
         ui.translate(ui.width / 2, ui.height / 2 - 20);
-        ui.background(0);
         ui.rotate(radians(theta));
-        for(float i = )
-        ui.scale(s);
-        ui.rect(0, 0, size.x, size.y);
+        for(s = 0.9f; s >= 0.4; s -= dS){
+            ui.scale(s);
+            ui.rect(0, 0, size.x, size.y);
+        }
         ui.popMatrix();
 
         theta += 0.5f;
