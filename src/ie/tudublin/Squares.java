@@ -8,7 +8,8 @@ public class Squares extends InterfaceObject {
     private PApplet ui;
     private PVector size;
     private float s = 0.9f;
-    private final float dS = 0.115f;
+    private final float dS = 0.115f; // differentiate scale
+    private float theta = 0.0f;
 
     public Squares(PApplet _ui, PVector _pos, PVector _size) {
         super(_ui, _pos);
@@ -17,9 +18,7 @@ public class Squares extends InterfaceObject {
     }
 
     public void update() {
-        if(s < 1 && s >= 0) {
-            s -= dS;
-        }
+
     }
 
     public void render() {
@@ -30,8 +29,14 @@ public class Squares extends InterfaceObject {
         ui.rectMode(CENTER);
         ui.pushMatrix();
         ui.translate(ui.width / 2, ui.height / 2 - 20);
-        ui.scale(s);
-        ui.rect(0, 0, size.x, size.y);
+        ui.rotate(radians(theta));
+        for(s = 0.9f; s >= 0.4; s -= dS){
+            ui.scale(s);
+            ui.rect(0, 0, size.x, size.y);
+        }
         ui.popMatrix();
+
+        theta += 0.5f;
     }
+
 }

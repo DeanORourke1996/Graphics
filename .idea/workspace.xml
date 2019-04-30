@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="901e1fcc-7a93-4a7c-bb41-8250ae11d49a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graphics/ie/tudublin/HeadingTabs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graphics/ie/tudublin/HeadingTabs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graphics/ie/tudublin/Squares.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graphics/ie/tudublin/Squares.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Graphics/ie/tudublin/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Graphics/ie/tudublin/UI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ie/tudublin/Squares.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ie/tudublin/Squares.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ie/tudublin/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ie/tudublin/UI.java" afterDir="false" />
     </list>
@@ -33,16 +29,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ie/tudublin/UI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="101" column="66" selection-start-line="101" selection-start-column="66" selection-end-line="101" selection-end-column="66" />
+            <state relative-caret-position="408">
+              <caret line="113" column="19" lean-forward="true" selection-start-line="113" selection-start-column="19" selection-end-line="113" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3084#3085#0" expanded="true" />
-                <element signature="e#3120#3121#0" expanded="true" />
-                <element signature="e#3167#3168#0" expanded="true" />
-                <element signature="e#3199#3200#0" expanded="true" />
-                <element signature="e#3236#3237#0" expanded="true" />
-                <element signature="e#3269#3270#0" expanded="true" />
+                <element signature="e#2521#2522#0" expanded="true" />
+                <element signature="e#2549#2550#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ie/tudublin/Squares.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state relative-caret-position="98">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -60,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ie/tudublin/InterfaceObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="204">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -69,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ie/tudublin/HeadingTabs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+            <state relative-caret-position="340">
+              <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -84,13 +76,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ie/tudublin/HeadingTabs.java" />
+        <option value="$PROJECT_DIR$/src/ie/tudublin/InterfaceObject.java" />
         <option value="$PROJECT_DIR$/src/ie/tudublin/Squares.java" />
         <option value="$PROJECT_DIR$/src/ie/tudublin/UI.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="427" />
+    <option name="y" value="-20" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -98,32 +92,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SciFiUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SciFiUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SciFiUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SciFiUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SciFiUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SciFiUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tudublin" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -171,7 +140,9 @@
       <workItem from="1556042389012" duration="5077000" />
       <workItem from="1556110543188" duration="11684000" />
       <workItem from="1556139458893" duration="1868000" />
-      <workItem from="1556196424594" duration="1467000" />
+      <workItem from="1556196424594" duration="4350000" />
+      <workItem from="1556542377939" duration="8300000" />
+      <workItem from="1556621966139" duration="4816000" />
     </task>
     <task id="LOCAL-00001" summary="updated interface and fixed some problems">
       <created>1555453638247</created>
@@ -184,7 +155,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34920000" />
+    <option name="totallyTimeSpent" value="50919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -219,6 +190,7 @@
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32980332" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" weight="0.19364598" />
@@ -259,6 +231,9 @@
     <MESSAGE value="updated interface and fixed some problems" />
     <option name="LAST_COMMIT_MESSAGE" value="updated interface and fixed some problems" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SciFiUI$Main.ic" NAME="Main Coverage Results" MODIFIED="1556546371674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ie/tudublin/MovingCircle.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -274,39 +249,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ie/tudublin/HeadingTabs.java">
+    <entry file="file://$PROJECT_DIR$/src/ie/tudublin/InterfaceObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="70" lean-forward="true" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
+        <state relative-caret-position="204">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ie/tudublin/InterfaceObject.java">
+    <entry file="file://$PROJECT_DIR$/src/ie/tudublin/HeadingTabs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="340">
+          <caret line="21" column="70" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ie/tudublin/Squares.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="98">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ie/tudublin/UI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="101" column="66" selection-start-line="101" selection-start-column="66" selection-end-line="101" selection-end-column="66" />
+        <state relative-caret-position="408">
+          <caret line="113" column="19" lean-forward="true" selection-start-line="113" selection-start-column="19" selection-end-line="113" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3084#3085#0" expanded="true" />
-            <element signature="e#3120#3121#0" expanded="true" />
-            <element signature="e#3167#3168#0" expanded="true" />
-            <element signature="e#3199#3200#0" expanded="true" />
-            <element signature="e#3236#3237#0" expanded="true" />
-            <element signature="e#3269#3270#0" expanded="true" />
+            <element signature="e#2521#2522#0" expanded="true" />
+            <element signature="e#2549#2550#0" expanded="true" />
           </folding>
         </state>
       </provider>
