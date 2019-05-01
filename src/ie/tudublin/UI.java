@@ -59,12 +59,6 @@ public class UI extends PApplet {
         // 55 percent height of page with tabs...
         rect((float)(width / 2) - halfWidth, headCenter.size.y, C_WIDTH, (float)(height * 0.65));
         rectMode(CENTER);
-
-        line(headCenter.pos.x - (C_WIDTH + 30), headCenter.pos.y, headCenter.pos.x - (C_WIDTH + 30), height - 50);
-
-
-//        line(headL.pos.x + (headL.size.x/2), headL.pos.y + offset, headL.pos.x + (headL.size.x/2), (float)(height * 0.80));
-//        line(headR.pos.x - (headR.size.x/2), headR.pos.y + offset, headR.pos.x - (headR.size.x/2), (float)(height * 0.80));
     }
 
     public void settings() {
@@ -97,6 +91,10 @@ public class UI extends PApplet {
 
         rectMode(CENTER);
         rect(headL.pos.x, (float)(height * .5), headL.size.x, headL.size.y);
+        noFill();
+        ellipse(headL.pos.x, (float)(height * .5), headL.size.x, headL.size.y);
+        stroke(0, 202, 47);
+        line(headL.pos.x, (float)(height * .5), headL.pos.x +40, (float)(height * .5) + 70);
 
         textFont(f, 20);
         fill(50);
