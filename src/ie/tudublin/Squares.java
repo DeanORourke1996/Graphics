@@ -17,7 +17,7 @@ public class Squares extends InterfaceObject {
         this.size = _size;
     }
 
-    public void update(int val) {
+    public void update() {
 
     }
 
@@ -29,13 +29,15 @@ public class Squares extends InterfaceObject {
         ui.rectMode(CENTER);
         ui.pushMatrix();
         ui.translate(ui.width / 2, ui.height / 2);
-        ui.rotate(radians(theta));
+        if(ui.keyCode == RIGHT)
+            ui.rotate(radians(theta));
+        else if(ui.keyCode == LEFT)
+            ui.rotate(radians(-theta));
         for(s = 0.9f; s >= 0.4; s -= dS){ // draw nested rectangles
             ui.scale(s);
             ui.rect(0, 0, size.x, size.y);
         }
         ui.popMatrix();
-
         theta += 0.5f;
     }
 

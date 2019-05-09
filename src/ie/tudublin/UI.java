@@ -17,6 +17,7 @@ public class UI extends PApplet {
     private float halfWidth = C_WIDTH / 2;
     private PVector rectSize = new PVector(INIT_RECT_WIDTH, INIT_RECT_HEIGHT);
     private final PVector rectPos = new PVector(width/2, height/2);
+    private boolean[] keys = new boolean[1024];
 
     private LocalDateTime localDateTime = LocalDateTime.now();
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMATTER);
@@ -28,7 +29,15 @@ public class UI extends PApplet {
     private PFont f;
 
     public void keyPressed() {
+        keys[keyCode] = true;
+    }
 
+    public void keyReleased() {
+        keys[keyCode] = false;
+    }
+
+    public boolean checkKey(int c) {
+        return keys[c] || keys[Character.toUpperCase(c)];
     }
 
     private void drawTabs() {
@@ -102,7 +111,7 @@ public class UI extends PApplet {
         text("COV 274207281 - 1", headCenter.pos.x - (float)(C_WIDTH / 2) + offsetX, A_HEIGHT - offsetY);
         text("L - 542", headL.pos.x - (float)(LR_WIDTH/2) + offsetX, A_HEIGHT - offsetY);
 
-        squares.update(key);
+        squares.update();
         squares.render();
     }
 }
